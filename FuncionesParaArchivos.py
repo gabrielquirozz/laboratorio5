@@ -28,6 +28,7 @@ def encriptarArchivo(archivo, key):
     with open(archivo + ".enc", 'wb') as file:
         file.write(enc)
 
+#Funcion de desencriptar archivos .enc con CBC.  
 def desencriptarArchivo(archivo, key):
     with open(archivo, 'rb') as file:
         ciphertext = file.read()
@@ -35,7 +36,7 @@ def desencriptarArchivo(archivo, key):
     with open(archivo + ".dec", 'wb') as file:
         file.write(dec)
 
-
+#Llave de 16 bytes
 key = b'a9755fd70d8d6db65a6fac12d4797dde'
 #encriptarArchivo('text.txt', key)
 desencriptarArchivo('text.txt.enc', key)
